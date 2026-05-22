@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiangiringo - Productos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/Productos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo para que todo el cuadro sea clickeable de forma limpia */
+    .cuadro-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+    }
+    .cuadro-link:hover .cuadro {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+
+    /* Sección de categorías con fondo oscuro protector */
+    .seccion-categorias {
+      background-color: rgba(18, 21, 27, 0.85);
+      border: 2px solid #2d3538;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .btn-categoria {
+      background-color: #191e1f;
+      color: #ffffff;
+      border: 2px solid #2d3538;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-categoria:hover, .btn-categoria.active {
+      background-color: #ffbb00;
+      border-color: #ffbb00;
+      color: #12151b;
+    }
+  </style>
+</head>
+<body class="a1">
+
+  <header class="navbar navbar-expand-md custom-header">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-4 py-2">
+      <a href="index.html" class="logo navbar-brand m-0">
+        <img src="Imagenes/Logo (2).png" alt="Logo">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuOriginal" aria-controls="menuOriginal" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="menuOriginal">
+        <nav>
+          <ul class="custom-menu navbar-nav m-0 p-0 d-flex list-unstyled">
+            <li class="nav-item"><a href="Productos.html" class="nav-link ">Inicio</a></li>
+            <li class="nav-item"><a href="TdsLosProductos.html" class="nav-link">Productos</a></li>
+            <li class="nav-item"><a href="Servicios.html" class="nav-link active">Servicios</a></li>
+            <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <h1 class="titulo text-center my-4 fw-bold">SERVICIOS</h1>
+
+
+  <main class="container-fluid px-4 my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-4 justify-content-center">
+      
+      <!-- DENTISTA -->
+      <div class="col d-flex justify-content-center col-producto" data-categoria="figuras">
+        <!-- CAMBIO: Ahora envía precio y descripción -->
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Dentista', 'Imagenes/images (1).jpg', '$600.00 MXN', 'Consulta dental general, limpieza profunda y diagnóstico especializado para el cuidado de tu sonrisa.')">
+          <div class="cuadro">
+            <div class="img-container"><img src="Imagenes/images (1).jpg" alt="Dentista"></div>
+            <p>Dentista</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- PSICÓLOGO -->
+      <div class="col d-flex justify-content-center col-producto" data-categoria="ropa">
+        <!-- CAMBIO: Ahora envía precio y descripción -->
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Psicólogo', 'Imagenes/images (2).jpg', '$500.00 MXN', 'Sesión de terapia psicológica individual. Un espacio seguro y confidencial para tu bienestar mental.')">
+          <div class="cuadro">
+            <div class="img-container"><img src="Imagenes/images (2).jpg" alt="Psicólogo"></div>
+            <p>Psicólogo</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- ABOGADO -->
+      <div class="col d-flex justify-content-center col-producto" data-categoria="figuras">
+        <!-- CAMBIO: Ahora envía precio y descripción -->
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Abogado', 'Imagenes/abogados-5.jpg', '$800.00 MXN', 'Asesoría jurídica profesional legal en temas civiles, laborales o comerciales. Consulta personalizada.')">
+          <div class="cuadro">
+            <div class="img-container"><img src="Imagenes/abogados-5.jpg" alt="Abogado"></div>
+            <p>Abogado</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- ARTE -->
+      <div class="col d-flex justify-content-center col-producto" data-categoria="accesorios">
+        <!-- CAMBIO: Ahora envía precio y descripción -->
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Arte', 'Imagenes/b73cab45ab31e00fd0eb38e23d64a599.jpg', '$450.00 MXN', 'Clases personalizadas y talleres de pintura o diseño artístico. Saca al artista que llevas dentro.')">
+          <div class="cuadro">
+            <div class="img-container"><img src="Imagenes/b73cab45ab31e00fd0eb38e23d64a599.jpg" alt="Arte"></div>
+            <p>Arte</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- MEDICINA -->
+      <div class="col d-flex justify-content-center col-producto" data-categoria="figuras">
+        <!-- CAMBIO: Ahora envía precio y descripción -->
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Medicina', 'Imagenes/images (3).jpg', '$550.00 MXN', 'Consulta médica general, chequeo de signos vitales, recetas y orientación de salud preventiva.')">
+          <div class="cuadro">
+            <div class="img-container"><img src="Imagenes/images (3).jpg" alt="Medicina"></div>
+            <p>Medicina</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="custom-footer py-3"> 
+    <div class="container text-center">
+      <p class="m-0 text-white">© 2026 Tienda Tiangiringo - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <div class="chat-container">
+    <button class="chat-button" onclick="toggleChat()"></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // CAMBIO: Ahora la función recibe y guarda los 4 datos (nombre, imagen, precio, descripcion)
+    function verDetalle(nombre, imagen, precio, descripcion) {
+      localStorage.setItem('producto_nombre', nombre);
+      localStorage.setItem('producto_imagen', imagen);
+      localStorage.setItem('producto_precio', precio);
+      localStorage.setItem('producto_descripcion', descripcion);
+    }
+
+    function toggleChat() {
+      window.location.href = "Contacto.html";
+    }
+
+    // SISTEMA DE FILTRADO CON CLASES DE BOOTSTRAP
+    function filtrarCategoria(categoria, botonSeleccionado) {
+      const botones = document.querySelectorAll('.btn-categoria');
+      botones.forEach(btn => btn.classList.remove('active'));
+      botonSeleccionado.classList.add('active');
+
+      const productos = document.querySelectorAll('.col-producto');
+      productos.forEach(producto => {
+        const catProducto = producto.getAttribute('data-categoria');
+        
+        if (categoria === 'todos' || catProducto === categoria) {
+          producto.classList.remove('d-none');
+        } else {
+          producto.classList.add('d-none');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

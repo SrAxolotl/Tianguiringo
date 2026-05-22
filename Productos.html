@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiangiringo - Productos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/Productos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo para que el cuadro actúe como un botón clickeable */
+    .cuadro-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+    }
+    .cuadro-link:hover .cuadro {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 187, 0, 0.2);
+    }
+  </style>
+</head>
+<body class="a1">
+
+  <header class="navbar navbar-expand-md custom-header">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-4 py-2">
+      <a href="index.html" class="logo navbar-brand m-0">
+        <img src="Imagenes/Logo (2).png" alt="Logo">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuHamburguesa" aria-controls="menuHamburguesa" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="menuHamburguesa">
+        <nav>
+          <ul class="custom-menu navbar-nav m-0 p-0 d-flex list-unstyled">
+            <li class="nav-item"><a href="Productos.html" class="nav-link active">Inicio</a></li>
+            <li class="nav-item"><a href="TdsLosProductos.html" class="nav-link ">Productos</a></li>
+             <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+            <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="Imgx">
+    <img src="Imagenes/descarga.jpg" alt="Banner">
+  </div>
+
+  <h1 class="titulo text-center my-4 fw-bold">PRODUCTOS</h1>
+
+  <main class="container my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+      
+      <div class="col d-flex justify-content-center">
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Peluche Conejo Esqueleto', 'Imagenes/Gerard (1).jpeg', '$320.00 MXN', 'Peluche gótico de conejito con máscara de calavera y un tierno corazón rojo en el pecho. Súper suave y detallado.')">
+          <div class="cuadro">
+            <div class="img-container">
+              <img src="Imagenes/Gerard (1).jpeg" alt="Peluche Conejo Esqueleto">
+            </div>
+            <p>Peluche Conejo Esqueleto</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Misil Réplica Gigante', 'Imagenes/Gerard (3).jpeg', '$4,500.00 MXN', 'Réplica a escala real de un misil militar de utilería. Ideal para decoración de habitaciones temáticas o coleccionistas extremos.')">
+          <div class="cuadro">
+            <div class="img-container">
+              <img src="Imagenes/Gerard (3).jpeg" alt="Misil Réplica Gigante">
+            </div>
+            <p>Misil Réplica Gigante</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Picador Slap Chop', 'Imagenes/Gerard (2).jpeg', '$280.00 MXN', 'El clásico picador de verduras y frutas rápido. Pica tus alimentos en segundos con un par de presiones de forma segura.')">
+          <div class="cuadro">
+            <div class="img-container">
+              <img src="Imagenes/Gerard (2).jpeg" alt="Picador Slap Chop">
+            </div>
+            <p>Picador Slap Chop</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <a href="Compra.html" class="cuadro-link" onclick="verDetalle('Muñeco Woody Clásico', 'Imagenes/Gerard.jpeg', '$350.00 MXN', 'Figura clásica del Comisario Woody de Toy Story. Detalles fieles a la película para revivir tu infancia.')">
+          <div class="cuadro">
+            <div class="img-container">
+              <img src="Imagenes/Gerard.jpeg" alt="Muñeco Woody Clásico">
+            </div>
+            <p>Muñeco Woody Clásico</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <section class="text-center my-5 soporte-links">
+    <p class="Ayuda mb-2"><a href="TdsLosProductos.html">Ver todos los Productos →</a></p>
+    <p class="text-muted" style="cursor: pointer;" onclick="toggleChat()">¿Necesitas ayuda? Chatea con nosotros.</p>
+  </section>
+
+  <footer class="custom-footer py-3"> 
+    <div class="container text-center">
+      <p class="m-0 text-white">© 2026 Tienda Tiangiringo - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <div class="chat-container">
+    <button class="chat-button" onclick="toggleChat()"></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Guarda de manera centralizada la información del producto seleccionado para usarlo en Compra.html
+    function verDetalle(nombre, imagen, precio, descripcion) {
+      localStorage.setItem('producto_nombre', nombre);
+      localStorage.setItem('producto_imagen', imagen);
+      localStorage.setItem('producto_precio', precio);
+      localStorage.setItem('producto_descripcion', descripcion);
+    }
+
+    // Redirección al chat/contacto de la tienda
+    function toggleChat() {
+      window.location.href = "Contacto.html";
+    }
+  </script>
+</body>
+</html>
